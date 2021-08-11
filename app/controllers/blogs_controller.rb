@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
   # GET /blogs or /blogs.json
   def index
     #Blog.all
-    @blogs = current_user.blogs.order(:created_at).reverse 
+    @blogs = current_user.blogs.order(:created_at).reverse  # however this works too: blogs.order("created_at DESC") 
   end
 
   # GET /blogs/1 or /blogs/1.json
